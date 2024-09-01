@@ -1,0 +1,310 @@
+<title>Income Goals Calculator | The Leads Autopilot</title>
+<meta charset="UTF-8">
+
+<div class="container">
+    <a href="https://leadsautopilot.com"><img src="Logo.png" style="width: 300px; margin: auto;"></a>
+    <h1>Income Goals Calculator &#x1F4B8;</h1>
+
+    <p>Most of you have a dream without a plan.</p>
+
+    <p>The only way to achieve your income goal as a coach, freelancer, or service provider,</p>
+        
+    <p>Is to figure out EXACTLY what steps you need to take.</p>
+
+    <p>Answer the following questions and we will give you a roadmap to achieve your goals: &#x1F449;</p>
+
+    <div class="input-group">
+        <label for="incomeGoal">Monthly Income Goal</label>
+        <p><b>How much money (in USD) do you want to earn each month?</b></p>
+        <input type="number" id="incomeGoal" value="20000">
+    </div>
+
+    <div class="input-group">
+        <label for="timeline">Timeline</label>
+        <p>In how many months from now do you wish to achieve your income goal?</p>
+        <input type="number" id="timeline" value="6">
+    </div>
+
+    <div class="input-group">
+        <label for="currentClientele">Current Clientele</label>
+        <p>How many clients are you working with currently?</p>
+        <input type="number" id="currentClientele" value="2">
+    </div>
+
+    <div class="input-group">
+        <label for="clientRetainer">Monthly Retainer (USD/month)</label>
+        <p>How much money (in USD), on average, do you charge each month for your services?</p>
+        <input type="number" id="clientRetainer" value="3000">
+    </div>
+
+    <div class="input-group">
+        <label for="clientTenure">Average Client Tenure (months)</label>
+        <p>How many months, on average, does a client continue to work with you?</p>
+        <input type="number" id="clientTenure" value="5">
+    </div>
+
+    <div class="input-group">
+        <label for="closingRate">Closing Rate (%)</label>
+        <p>What percentage of sales calls do you close?</p>
+        <input type="number" id="closingRate" value="20">
+    </div>
+
+    <button onclick="calculateROI()">Give me a plan</button>
+
+    <div id="plan" style="display: none;">
+        <h1 id="planTitle">Your personalized plan to achieve $10,000/month within 5 months</h1>
+        <div id="planSteps"></div>
+
+        <h2>Your Income Projection</h2>
+        <p id="predictions"></p>
+
+        <h1 id="bookMeetings">How to Book Meetings</h1>
+        <div id="packageSalesCalls">
+            <p><b>In order to achieve your income goal of $15,000/month, you will need to book at least 45 meetings in the next 90 days (15/month).</b></p>
+            <p>Imagine if you didn't have to go through the headache of manually booking these meetings.</p>
+            <p>Save time and see immediate results by partnering with The Leads Autopilot. Our proven systems ensure you book qualified meetings from LinkedIn using our outbound systems and strategies.</p>
+            <p><u><b>📝We will contractually guarantee you book 60-90 qualified meetings in the next 90 days, giving you the momentum you need to reach your income goal of $15,000/month.</b></u></p>
+        </div>
+        
+        <div id="recommendedPackageBox" class="results-box">
+            <h3>&#x1F4E6; Recommended Package: LeadsAutopilot Standard</h3>
+            <p>✅ Message automation (50 new conversations/day)</p>
+            <p>✅ Automatic follow-ups</p>
+            <p>✅ Trained appointment setter logged into your account + booking appointments</p>
+            <p>✅ All expenses for appointment setter covered by LeadsAutopilot</p>
+            <p>✅ Custom scripts for trained appointment setter</p>
+            <p><b>📝 We contractually guarantee to book 60-90 qualified meetings in the next 90 days using outbound messages from your LinkedIn profile.</b></p>
+            <p><b>🕒 Your purchase comes with 7-day 100% money-back guarantee.</b></p>
+            <a href="https://calendly.com/colddm/free-value"><button id="recommendedPackageButton">Select the Standard Package ($832 down)</button></a>
+            <p style="text-align: center;">Price: $4997 USD or 6 interest-free installments of $832.</p>
+            <div class="cta">
+            </div>
+        </div>
+
+        <div id="packageProjections">
+            <p>For just $832 down, your business will have a streamlined process for acquiring clients from LinkedIn.</p>
+            <p><b>Step 1.</b> The Leads Autopilot will book 60-90 sales calls for you in the next 90 days. No work requried</p>
+            <p><b>Step 2.</b> Close <b>20%</b> of these sales calls to land 12 clients in the next 90 days.</p>
+            <p>Each client you land pays you <b>$3,000 per month</b> and purchases your services for <b>12 months</b>. Therefore, each client is worth <b>$36,000</b> in lifetime value.</p>
+            <p>🥳 With 12 clients, you'll take home an additional <b>$432,000</b> in revenue from a $4997 investment. That's a <b>86X</b> return on investment!</p>
+            <p>What are you waiting for? <a href="https://calendly.com/colddm/free-value">Click here to book a call with us today!</a></p>
+        </div>
+
+        <p>Are you just starting out?</p>
+        <div id="payAsYouGoBox" class="results-box">
+            <h3>&#x1F4E6; Pay-As-You-Go Package</h3>
+            <p>The pay-as-you-go package includes a pay now of just $333. Book a call today.</p>
+            <div class="cta">
+                <button onclick="location.href='https://calendly.com/colddm/free-value';">Select the Pay-As-You-Go Package ($333 down)</button>
+            </div>
+        </div>
+
+    </div>
+
+
+    <p style="font-size: 10px; font-style: italic;">The projections provided by the LeadsAutopilot.com Income Goal calculator are for illustrative purposes only and are based on the input parameters and assumptions you have entered. These projections should not be interpreted as promises, guarantees, or precise estimates of future income. Your actual income may vary significantly depending on numerous factors, including, but not limited to, client acquisition rates, retention rates, market conditions, changes in service pricing, and your individual performance. The results generated by this calculator are hypothetical and do not account for unforeseen circumstances or changes in business strategies. We strongly recommend consulting with financial advisors, business consultants, or other professionals before making any decisions based on the projections from this calculator. LeadsAutopilot.com expressly disclaims any liability for any direct, indirect, consequential, or incidental losses or damages that may result from reliance on the projections provided. By using this Income Goal calculator, you acknowledge and agree to this disclaimer and its terms.</p>
+
+    <p style="text-align: center;">Copyright 2024 Brookstone Digital Services, LLC.</p>
+</div>
+
+<script>
+function calculateROI() {
+    // Get inputs
+    const incomeGoal = parseFloat(document.getElementById('incomeGoal').value);
+    const timeline = parseFloat(document.getElementById('timeline').value);
+    const currentClientele = parseFloat(document.getElementById('currentClientele').value);
+    const closingRate = parseFloat(document.getElementById('closingRate').value) / 100;
+    const clientRetainer = parseFloat(document.getElementById('clientRetainer').value);
+    const clientTenure = parseFloat(document.getElementById('clientTenure').value);
+
+    // Calculate the exact number of clients needed to reach the income goal
+    const clientsNeeded = incomeGoal / clientRetainer;
+
+    // Calculate the exact number of new clients needed per month to achieve the goal within the timeline
+    let newClientsNeededPerMonth;
+    if (clientTenure >= timeline) {
+        newClientsNeededPerMonth = (clientsNeeded - currentClientele) / timeline;
+    } else {
+        newClientsNeededPerMonth = (clientsNeeded - currentClientele) / (clientTenure);
+    }
+
+    // Calculate the exact number of sales calls needed per month
+    const salesCallsNeededPerMonth = newClientsNeededPerMonth / closingRate;
+
+    // Recalculate the number of new clients per month based on the rounded sales calls
+    const roundedNewClientsNeededPerMonth = Math.ceil(newClientsNeededPerMonth);
+    const roundedSalesCallsNeededPerMonth = Math.ceil(roundedNewClientsNeededPerMonth / closingRate);
+
+    // Calculate the actual month when the income goal will be reached based on the recalculated clients
+    const actualMonthsToReachGoal = Math.ceil((clientsNeeded - currentClientele) / roundedNewClientsNeededPerMonth);
+
+    // Set the goal achieved month to either the actual or the timeline, whichever is smaller
+    const goalAchievedMonth = Math.min(actualMonthsToReachGoal, timeline);
+
+    // Output plan steps with the correct ordinal number for the nth month
+    document.getElementById('planSteps').innerHTML = `
+        <p>To achieve your monthly income goal of $${numberWithCommas(incomeGoal)}, you need to sign ${Math.ceil(clientsNeeded) - currentClientele} more clients for a total of ${Math.ceil(clientsNeeded)}.</p>
+        <p><b>Step 1.</b> Book ${roundedSalesCallsNeededPerMonth} sales calls per month.</p>
+        <p><b>Step 2.</b> Close ${closingRate * 100}% of these calls to sign ${Math.ceil(roundedNewClientsNeededPerMonth)} new ${Math.ceil(roundedNewClientsNeededPerMonth) == 1 ? "client" : "clients"} per month.</p>
+        <p>&#9989; You will reach your income goal within ${goalAchievedMonth} months from now.</p>
+        <p><b>Step 3.</b> Continue acquiring ${Math.ceil(roundedNewClientsNeededPerMonth)} new ${Math.ceil(roundedNewClientsNeededPerMonth) == 1 ? "client" : "clients"} each month to maintain this income beyond the ${getOrdinalNumber(goalAchievedMonth)} month.</p>
+    `;
+
+    // Project income over the specified timeline
+    let monthlyIncomes = projectMonthlyIncome(currentClientele, Math.ceil(roundedNewClientsNeededPerMonth), clientRetainer, clientTenure, timeline);
+    let predictionText = monthlyIncomes.map(p => `Month ${getOrdinalNumber(p.month)}: $${numberWithCommas(p.incomeThisMonth)} per month with ${p.clients} clients.`).join('<br>\n');
+    document.getElementById("predictions").innerHTML = predictionText;
+
+    // Change the header
+    document.getElementById("planTitle").innerText = `Your personalized plan to achieve $${numberWithCommas(incomeGoal)}/month within ${goalAchievedMonth} months`;
+
+    // Change the subheader
+    document.getElementById("bookMeetings").innerText = `How to Book ${roundedSalesCallsNeededPerMonth} Sales Calls per Month`;
+
+    // Calculations
+    let LTV = clientRetainer * clientTenure;
+    let clientsWithStandardPackage = Math.ceil(60 * closingRate);
+    let totalReturn = LTV * clientsWithStandardPackage;
+    let roi = Math.ceil(totalReturn / 4997);
+
+    // Update HTML content
+    let totalMeetings = Math.ceil(salesCallsNeededPerMonth) * 3;
+    document.getElementById('packageSalesCalls').innerHTML = `
+        <p><b>In order to achieve your income goal of $${numberWithCommas(incomeGoal)}/month, you will need to book at least ${totalMeetings} meetings in the next 90 days (${Math.ceil(salesCallsNeededPerMonth)} meetings/month).</b></p>
+        <p>Imagine if you didn't have to go through the headache of manually booking these meetings.</p>
+        <p>Save time and see immediate results by partnering with The Leads Autopilot. Our proven systems ensure you book qualified meetings from LinkedIn using our outbound systems and strategies.</p>
+        <p><u><b>📝We will contractually guarantee you book 60-90 qualified meetings in the next 90 days, giving you the momentum you need to reach your income goal of $${numberWithCommas(incomeGoal)}/month.</b></u></p>
+    `;
+
+    document.getElementById("packageProjections").innerHTML = `
+        <p>For just $832 down, your business will have a streamlined process for acquiring clients from LinkedIn.</p>
+        <p><b>Step 1.</b> The Leads Autopilot will book 60-90 sales calls for you in the next 90 days. No work required.</p>
+        <p><b>Step 2.</b> Close <b>${closingRate * 100}%</b> of these sales calls to land <b>${clientsWithStandardPackage} clients</b> in the next 90 days.</p>
+        <p>Each client you land pays you <b>$${numberWithCommas(clientRetainer)} per month</b> and purchases your services for <b>${clientTenure} months</b>. Therefore, each client is worth <b>$${numberWithCommas(LTV)}</b> in lifetime value.</p>
+        <p>🥳 With ${clientsWithStandardPackage} clients, you'll take home an additional <b>$${numberWithCommas(totalReturn)}</b> in revenue from a $4997 investment. That's a <b>${roi}X</b> return on investment!</p>
+        <p>What are you waiting for? <a href="https://calendly.com/colddm/free-value">Click here to book a call with us today!</a></p>
+    `;
+
+    // Display the plan
+    document.getElementById("plan").style.display = 'block';
+}
+
+// Function to project monthly income over a given timeline
+function projectMonthlyIncome(currentClients, newClientsPerMonth, clientRetainer, clientTenure, timeline) {
+    let clients = currentClients;
+    let monthlyIncomes = [];
+
+    for (let month = 1; month <= timeline; month++) {
+        // Remove clients who have completed their tenure (if month > clientTenure)
+        if (month > clientTenure) {
+            clients -= newClientsPerMonth;
+        }
+
+        // Ensure the number of clients doesn't drop below zero
+        clients = Math.max(0, clients);
+
+        // Add new clients each month
+        clients += newClientsPerMonth;
+
+        // Calculate the income from current clients
+        let incomeThisMonth = clients * clientRetainer;
+
+        // Store the monthly income and number of clients
+        monthlyIncomes.push({
+            month: month,
+            incomeThisMonth: incomeThisMonth,
+            clients: clients
+        });
+    }
+
+    return monthlyIncomes;
+}
+
+// Utility function to format numbers with commas
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+// Utility function to get ordinal numbers
+function getOrdinalNumber(n) {
+    const suffixes = ["th", "st", "nd", "rd"];
+    const value = n % 100;
+    return n + (suffixes[(value - 20) % 10] || suffixes[value] || suffixes[0]);
+}
+
+</script>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+}
+.container h1, .container a {
+    color: #E15311;
+}
+.container .input-group {
+    margin-bottom: 15px;
+}
+.container .input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 22px;
+    font-weight: bold;
+}
+.container .input-group p {
+    margin: 5px 0 10px 0;
+    color: #555;
+    font-size: 0.9em;
+}
+.container .input-group input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+.container .results-box {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.results-box h3 {
+    margin-top: 0;
+}
+.results-box p {
+    margin: 10px 0;
+}
+.cta {
+    margin-top: 15px;
+    text-align: center;
+}
+.container button {
+    padding: 10px 20px;
+    background-color: #E15311;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    height: 4.125rem;
+    line-height: 4.125rem;
+    padding: 0 2.0625rem;
+    vertical-align: middle;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    font-weight: 800;
+    border-radius: 0rem;
+    direction: var(--site-language-direction);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
+}
+.container button:hover {
+    background-color: #E15311;
+}
+</style>
